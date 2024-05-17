@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Teknolojileri Ödevi</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Ana Sayfa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hakkinda">Hakkında</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sehrim">Şehrim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#takimimiz">Takımımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#iletisim">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-5">
+        <section id="hakkinda" class="mb-5">
+            <h1>Hakkımda</h1>
+            <p></p>
+        </section>
+
+        <section id="sehrim" class="mb-5">
+            <h1>Şehrim</h1>
+            <p></p>
+        </section>
+
+        <section id="takimimiz" class="mb-5">
+            <h1>Takımımız</h1>
+            <p></p>
+        </section>
+
+        <section id="iletisim">
+            <h1>İletişim</h1>
+            <form id="contactForm" class="needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="name">Ad:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                    <div class="invalid-feedback">
+                        Lütfen adınızı giriniz.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="invalid-feedback">
+                        Lütfen geçerli bir e-posta adresi giriniz.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesaj:</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    <div class="invalid-feedback">
+                        Lütfen bir mesaj giriniz.
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="clearForm()">Temizle</button>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function clearForm() {
+            document.getElementById('contactForm').reset();
+        }
+
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+</html>
