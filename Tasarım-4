@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Teknolojileri Ödevi</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #333;
+            color: white;
+        }
+
+        nav a {
+            color: white !important;
+            text-decoration: none;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides img {
+            width: 100%;
+            display: none;
+            cursor: pointer;
+        }
+
+        .slides img.active {
+            display: block;
+        }
+
+        .hidden-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Web Teknolojileri Ödevi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('home')">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('hakkinda')">Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('sehrim')">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('mirasimiz')">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('takimimiz')">Takımımız</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('iletisim')">İletişim</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4">
+        <section id="home" class="section active">
+            <h1 class="text-center">Hoş Geldiniz</h1>
+            <form id="loginForm" action="index.php" method="post" class="w-50 mx-auto">
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı:</label>
+                    <input type="email" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre:</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+            </form>
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $username = $_POST['username'];
+                $password = $_POST['password'];
+                $student_id = substr($username, 0, strpos($username, '@'));
+
+                // Yeni kısıtlamaları kontrol et
+                $valid_first_letters = ['e', 'u', 'g', 'b'];
+                $first_letter = strtolower($username[0]);
+
+                $numbers_before_at = preg_replace('/[^0-9]/', '', substr($username, 0, strpos($username, '@')));
+
+                if (filter_var($username, FILTER_VALIDATE_EMAIL) && $password === $student_id
+                    && in_array($first_letter, $valid_first_letters)
+                    && strlen($numbers_before_at) === 9) {
+                    echo "<p class='text-center mt-3'>Hoşgeldiniz " . htmlspecialchars($student_id) . "!</p>";
+                } else {
+                    echo "<p class='text-center text-danger mt-3'>Giriş başarısız. Lütfen tekrar deneyiniz.</p>";
+                }
+            }
+            ?>
+        </section>
+        <section id="hakkinda" class="section">
+            <h1>Hakkımda</h1>
+            <p>Buraya kendi bilgilerinizi ekleyebilirsiniz.</p>
+        </section>
+        <section id="sehrim" class="section">
+            <h1>Şehrim</h1>
+            <div class="slider">
+                <div class="slides">
+                    <img src="img1.jpg" alt="Şehir Görseli 1" class="active" onclick="showImageContent('img1Content')">
+                    <img src="img2.jpg" alt="Şehir Görseli 2" onclick="showImageContent('img2Content')">
+                    <img src="img3.jpg" alt="Şehir Görseli 3" onclick="showImageContent('img3Content')">
+                    <img src="img4.jpg" alt="Şehir Görseli 4" onclick="showImageContent('img4Content')">
+                </div>
+            </div>
+        </section>
+        <section id="img1Content" class="section hidden-content">
+            <h1>Şehir Görseli 1</h1>
+            <p>Burada Şehir Görseli 1 hakkında bilgi bulunur.</p>
+        </section>
+        <section id="img2Content" class="section hidden-content">
+            <h1>Şehir Görseli 2</h1>
+            <p>Burada Şehir Görseli 2 hakkında bilgi bulunur.</p>
+        </section>
+        <section id="img3Content" class="section hidden-content">
+            <h1>Şehir Görseli 3</h1>
+            <p>Burada Şehir Görseli 3 hakkında bilgi bulunur.</p>
+        </section>
+        <section id="img4Content" class="section hidden-content">
+            <h1>Şehir Görseli 4</h1>
+            <p>Burada Şehir Görseli 4 hakkında bilgi bulunur.</p>
+        </section>
+        <section id="mirasimiz" class="section">
+            <h1>Mirasımız</h1>
+            <p>Buraya mirasınız hakkında bilgi ekleyebilirsiniz.</p>
+        </section>
+        <section id="takimimiz" class="section">
+            <h1>Takımımız</h1>
+            <p>Buraya takım üyelerinizin bilgilerini ekleyebilirsiniz.</p>
+        </section>
+        <section id="iletisim" class="section">
+            <h1>İletişim</h1>
+            <form id="contactForm" class="w-50 mx-auto">
+                <div class="form-group">
+                    <label for="name">Ad:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesaj:</label>
+                    <textarea class="form-control" id="message" name="message" required></textarea>
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="clearForm()">Temizle</button>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
+        </section>
+    </main>
+    <footer class="container-fluid text-center py-3 bg-dark text-white">
+        <p>Footer İçeriği</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                const slides = document.querySelectorAll(".slides img");
+                slides.forEach((slide, index) => {
+                    slide.style.display = "none";
+                    slide.classList.remove("active");
+                });
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                slides[slideIndex - 1].style.display = "block";
+                slides[slideIndex - 1].classList.add("active");
+                setTimeout(showSlides, 3000); // 3 saniyede bir değiştir
+            }
+        });
+
+        function showImageContent(contentId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(contentId).classList.add('active');
+        }
+
+        function clearForm() {
+            document.getElementById("contactForm").reset();
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const firstLetter = username.charAt(0).toLowerCase();
+            const validFirstLetters = ['e', 'u', 'g', 'b'];
+            const numbersBeforeAt = username.substring(0, username.indexOf('@')).replace(/[^0-9]/g, '');
+
+            if (!validFirstLetters.includes(firstLetter)) {
+                alert('E-posta ve şifre ilk harfi "e, u, g, b" harflerinden biri olmalıdır.');
+                event.preventDefault();
+                return;
+            }
+
+            if (numbersBeforeAt.length !== 9) {
+                alert('E-posta adresinde @ işaretine kadar tam olarak 9 adet sayı bulunmalıdır.');
+                event.preventDefault();
+                return;
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(username)) {
+                alert('Geçerli bir e-posta adresi giriniz.');
+                event.preventDefault();
+                return;
+            }
+
+            const studentId = username.substring(0, username.indexOf('@'));
+
+            if (password !== studentId) {
+                alert('Giriş başarısız. Lütfen tekrar deneyiniz.');
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
