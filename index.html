@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Teknolojileri Ödevi</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Web Teknolojileri Ödevi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('home')">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('hakkinda')">Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('sehrim')">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('mirasimiz')">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('takimimiz')">Takımımız</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('iletisim')">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('mesajlar')">Mesajlar</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4">
+        <div id="welcomeMessage" class="alert alert-success text-center" style="display: none;"></div>
+        
+        <section id="home" class="section active">
+            <h1 class="text-center">Hoş Geldiniz</h1>
+            <form id="loginForm" action="login.php" method="post" class="w-50 mx-auto">
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı:</label>
+                    <input type="email" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre:</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+            </form>
+        </section>
+        <section id="hakkinda" class="section">
+		<h1>Hakkımda</h1>
+		<p>Adım İsmail Hakkı Uludağ. 23 Mayıs 2004 tarihinde Bursa'da doğdum. Aslen Trabzonluyum. Hobilerim kitap okumak, müzik dinlemek ve futbol müsabakalarını takip etmek.</p>
+		<h2>İlgi Alanlarım</h2>
+		<p>Özellikle bilim kurgu türü olmak üzere felsefe,tarih.gibi düşnce temelli kitaplar da ilgi alnlarım kapsamındadır.Yine bir müziğin tınısı kulağıma hoş geliyorsa tür ayırmam genelde dinlerim.Futbol ise daha küçük yaşlardan takip ettiğim hem izlediğim hem de oyunlarını çokça oynadığım bir sektör.</p>
+		<h2>Özgeçmiş</h2>
+		<p>BİSAŞ okulunda ilköğretim eğitimini gördü.</p>
+		<p>MAAİHL ortaokulunda orta okul hayatını geçirdi.</p>
+		<p>İpekçilik Anadolu İmam Hatip Lisesinde lise eğitimini tamamladı.</p>
+		<p>Şu an Sakarya Üniversitesi Bilgisayar Mühendisliği bölümünde öğrenim görmekte.</p>
+</section>
+
+        <section id="sehrim" class="section">
+            <h1>Şehrim</h1>
+			<p>Trabzon, Karadeniz'in kuzeydoğusunda, tarih boyunca önemli bir stratejik konuma sahip olmuş, doğal güzellikleri ve zengin kültürel mirasıyla dikkat çeken bir şehirdir. Antik çağlardan beri birçok medeniyetin etkisi altında kalmış olan Trabzon, tarihî derinliğiyle Anadolu'nun ve Karadeniz'in önemli şehirlerinden biridir.
+
+Trabzon'un tarihi, MÖ 8. yüzyıla kadar uzanır. Yunan kolonistler tarafından kurulan Trapezus kenti, Pontus Krallığı'nın başkenti olarak önemli bir merkez haline gelmiştir. Helenistik dönemde ticaret ve kültürel etkileşimlerin yoğun olduğu bir şehir olan Trabzon, Roma İmparatorluğu ve Bizans İmparatorluğu dönemlerinde de stratejik konumu nedeniyle önemini korumuştur. Bu dönemlerde inşa edilen tarihi yapılar, şehrin tarihî zenginliğini günümüze taşır. Özellikle Ayasofya Müzesi, Bizans döneminin izlerini taşıyan ve şehrin sembollerinden biri olan önemli bir yapıdır.
+
+Trabzon, 1461 yılında Fatih Sultan Mehmet'in yönetimi altına girmiş ve Osmanlı İmparatorluğu'nun bir eyaleti olmuştur. Osmanlı döneminde ticaretin canlı olduğu bir liman şehri olarak önemini korumuş, aynı zamanda kültürel açıdan da gelişmiştir. Osmanlı mimarisinin etkisi altında inşa edilen camiler, hanlar, hamamlar ve konaklar, şehrin tarihî dokusunu ve zenginliğini yansıtır.
+
+Trabzon'un doğal güzellikleri ise Karadeniz'in benzersiz doğa harikaları arasında yer alır. Yeşilin binbir tonunu barındıran yaylaları, çağlayanları ve dağları, doğa tutkunlarını cezbetmektedir. Özellikle Uzungöl, Ayder Yaylası ve Zigana Geçidi, Trabzon'un doğal güzelliklerinin en popüler noktaları arasındadır. Ayrıca, Sümela Manastırı da şehrin doğal ve tarihî dokusunu bir araya getiren eşsiz bir yapı olarak öne çıkar.
+
+Kültürel açıdan da zengin bir mirasa sahip olan Trabzon, Karadeniz'in kendine özgü müziği, dansları, el sanatları ve yöresel mutfağıyla tanınır. Hamsi, mısır ekmeği, kuymak gibi lezzetler, Trabzon mutfağının en önemli örneklerindendir. Ayrıca, Horon ve Zeybek gibi geleneksel danslar, şehrin folklorik kültürünü yansıtır.
+
+Sonuç olarak, Trabzon tarihi, kültürel ve doğal zenginlikleriyle Karadeniz'in incisidir. Zengin tarihî mirası, doğal güzellikleri ve canlı kültürel dokusuyla Trabzon, ziyaretçilere benzersiz bir deneyim sunar. Bu nedenle, şehir sadece Türkiye'nin değil, dünyanın da dikkatini çeken önemli bir destinasyondur.</p>
+            <div class="slider">
+                <div class="slides">
+                    <img src="trabzon-ataturk-kosku.png" alt="Şehir Görseli 1" class="active" onclick="showImageContent('img1Content')">
+                    <img src="trabzon-ayasofya-muzesi.png" alt="Şehir Görseli 2" onclick="showImageContent('img2Content')">
+                    <img src="Uzungöl.png" alt="Şehir Görseli 3" onclick="showImageContent('img3Content')">
+                    <img src="Trabzon_Kalesi.png" alt="Şehir Görseli 4" onclick="showImageContent('img4Content')">
+                </div>
+            </div>
+        </section>
+        <section id="Atatürk Köşkü" class="section hidden-content">
+            <h1>Atatürk Köşkü</h1>
+            <p>Trabzon Atatürk Köşkü, Türkiye'nin Karadeniz Bölgesi'nde, Trabzon'un Sümela semtinde bulunan tarihi bir konak olup, Cumhuriyet döneminin önemli simgelerinden biridir. 19. yüzyılın sonlarında inşa edilen bu köşk, Osmanlı döneminde çeşitli amaçlarla kullanılmıştır ancak 1919 yılında Mustafa Kemal Atatürk'ün Trabzon'a geldiği dönemde, kendisi ve beraberindekilerin konaklama amacıyla kullanılması ile önem kazanmıştır. Atatürk'ün Trabzon ziyaretleri sırasında konakladığı bu yapı, günümüzde müze olarak hizmet vermektedir ve ziyaretçilere Atatürk'ün o dönemdeki yaşamına dair önemli ipuçları sunmaktadır. Ayrıca, köşkün bulunduğu bölge, muhteşem manzarası ile de dikkat çeker ve Trabzon'un tarihini ve kültürel mirasını yansıtan önemli bir turistik noktadır.</p>
+        </section>
+        <section id="Ayasofya Müzesi" class="section hidden-content">
+            <h1>Ayasofya Müzesi</h1>
+            <p>Trabzon Ayasofya Müzesi, Türkiye'nin Karadeniz Bölgesi'nde, Trabzon'da yer alan ve 13. yüzyılda inşa edilmiş tarihi bir yapıdır. Komnenos Hanedanı döneminde kilise olarak yapılan bu bina, Osmanlı İmparatorluğu döneminde camiye dönüştürülmüş ve Cumhuriyet döneminde ise müze olarak hizmet vermeye başlamıştır. Trabzon Ayasofya, Bizans mimarisinin güzel örneklerinden biri olup, fresklerle süslü iç mekânı ve zarif taş işçiliği ile dikkat çeker. Ana kubbesinde ve duvarlarında yer alan freskler, Hristiyan ikonografisinin önemli örneklerini barındırır. Müzeye dönüştürüldükten sonra, yapının tarihi ve sanatsal değerleri korunarak sergilenmiştir. Günümüzde hem yerli hem de yabancı turistlerin ilgisini çeken Trabzon Ayasofya Müzesi, şehrin zengin kültürel mirasını ve tarihini yansıtarak ziyaretçilerine eşsiz bir deneyim sunmaktadır.</p>
+        </section>
+        <section id="Uzungöl" class="section hidden-content">
+            <h1>Uzungöl</h1>
+            <p>Uzungöl, Türkiye'nin Karadeniz Bölgesi'nde, Trabzon'un Çaykara ilçesinde yer alan doğal güzellikleri ile ünlü bir turistik destinasyondur. Deniz seviyesinden yaklaşık 1090 metre yükseklikte bulunan bu göl, etrafını çevreleyen yemyeşil ormanlar ve dağlarla eşsiz bir manzara sunar. Yüksek dağlardan inen Haldizen Deresi'nin bir vadide birikmesiyle oluşan Uzungöl, bölgedeki doğal yaşamın korunmasına katkıda bulunan önemli bir ekosistemdir. Göl ve çevresi, doğa yürüyüşleri, kuş gözlemciliği, kampçılık ve balıkçılık gibi çeşitli açık hava etkinlikleri için ideal bir ortam sağlar. Ayrıca, göl kenarında yer alan ahşap evler ve geleneksel Karadeniz mimarisi, ziyaretçilere hem görsel bir şölen sunar hem de bölgenin kültürel dokusunu yakından tanıma fırsatı verir. Her mevsim farklı bir güzelliğe bürünen Uzungöl, doğa tutkunları ve fotoğraf meraklıları için vazgeçilmez bir yerdir.</p>
+        </section>
+        <section id="Trabzon Kalesi" class="section hidden-content">
+            <h1>Trabzon Kalesi</h1>
+            <p>Trabzon Kalesi, Türkiye'nin Karadeniz Bölgesi'nde, Trabzon şehrinde yer alan ve Antik Çağ'da inşa edilmiş tarihi bir yapıdır. Roma, Bizans, Komnenos ve Osmanlı dönemlerinde onarımlar görerek günümüze ulaşan kale, Yukarı Hisar (İç Kale), Orta Hisar ve Aşağı Hisar olmak üzere üç ana bölümden oluşur. Yukarı Hisar, kalenin en eski ve yüksek kısmı olup, askeri ve idari merkez olarak kullanılmıştır. Orta Hisar, Osmanlı dönemine ait cami, hamam ve medrese gibi yapıları barındırırken, Aşağı Hisar ise halkın yaşadığı ve ticaretin yoğun olduğu bölümdür. Trabzon Kalesi, denizden ve karadan gelebilecek saldırılara karşı kenti koruyan stratejik bir konumda yer alması nedeniyle tarih boyunca savunma ve ticaret açısından büyük öneme sahip olmuştur. Günümüzde turistik bir mekan olarak ziyaretçilere açık olan Trabzon Kalesi, zengin tarihi ve kültürel mirası ile dikkat çekmektedir. Restorasyon çalışmaları sayesinde korunmuş olan bu tarihi yapı, ziyaretçilere Trabzon'un geçmişine dair önemli ipuçları sunar ve kentin kültürel zenginliğini gözler önüne serer.</p>
+        </section>
+        <section id="mirasimiz" class="section">
+            <center><h1>Sümela Manastırı</h1></center>
+            <center><img src="sümela.png" alt="Manastır Görsel"> </center>
+             <p>Türkiye’nin kuzeydoğusunda, Karadeniz’in yeşilliklerle süslü dağları arasında, eşsiz bir manzara eşliğinde yükselen Sümela Manastırı, tarihi ve doğal güzellikleri bir araya getiren bir harikadır. Trabzon iline bağlı Maçka ilçesi sınırları içerisinde yer alan bu manastır, bir zamanlar Hristiyan Ortodoks keşişler tarafından ibadet ve yaşam merkezi olarak kullanılmıştır. Ancak günümüzde, turistlerin yoğun ilgisini çeken bir tarihî miras olarak hizmet vermektedir.
+
+Sümela Manastırı, muhteşem bir doğa manzarasının ortasında konumlanmıştır. Dik yamaçların üzerine inşa edilmiş olması, manastırı ziyaret edenleri etkileyen ilk detaydır. Manastır, üç katlı bir yapı kompleksi olarak tasarlanmıştır ve kayalara oyulmuş mağara benzeri yapılar arasında yer alır. Ana kaya üzerine oturtulmuş olan bu yapı, zaman içinde çeşitli eklemelerle genişletilmiş ve süslenmiştir.
+
+Manastırın tarihî geçmişi oldukça eskilere dayanır. M.S. 4. yüzyılda yaşamış olan Aziz Vavil’in önderliğinde inşa edildiği düşünülmektedir. Ancak günümüzdeki görünümünü, 13. ve 14. yüzyıllarda yapılan genişletme ve tamirat çalışmaları sonucunda almıştır. Manastır, Orta Çağ döneminde Bizans İmparatorluğu’nun etkisi altında kalmış ve zaman zaman önemli dini ve kültürel faaliyetlerin merkezi olmuştur.
+
+Sümela Manastırı’nın içi, duvar freskleri ve işlemeli süslemelerle bezenmiştir. Bu süslemeler, Hristiyan inancının önemli figürlerini ve olaylarını betimler. Ana kilise, manastır kompleksinin en büyük ve görkemli yapısıdır. İç mekanda bulunan freskler, ziyaretçilere tarihî bir yolculuk sunar ve manastırın ruhani atmosferini hissettirir.
+
+Manastırın çevresi, doğal güzelliklerle doludur. Yemyeşil ormanlar, şırıl şırıl akan dereler ve etkileyici bir vadi manzarası, Sümela’yı ziyaret edenleri büyüler. Özellikle ilkbahar ve sonbahar aylarında, doğanın renk cümbüşü manastırın mistik atmosferiyle bütünleşir ve unutulmaz bir deneyim sunar.
+
+Ancak ne yazık ki, Sümela Manastırı’nın tarihî ve doğal güzellikleri yanında bir de tehdit altındadır. Yıllar içinde oluşan çevresel etkenler ve artan ziyaretçi sayısı, manastırın yapısını ve çevresini olumsuz etkilemektedir. Bu nedenle, koruma ve restorasyon çalışmaları büyük önem taşımaktadır.
+
+Sümela Manastırı, hem tarihî hem de doğal bir hazinedir. Ziyaretçilerini tarihin derinliklerine yolculuğa çıkarırken aynı zamanda doğanın eşsiz güzelliklerini sunar. Bu muhteşem yapı, geçmişten günümüze uzanan bir miras olarak gelecek nesillere aktarılmalı ve korunmalıdır.</p>
+        </section>
+        <section id="takimimiz" class="section">
+            <h1>Trabzonspor</h1>
+            <p>Trabzonspor, Türk futbolunun önemli kulüplerinden biri olarak 1967 yılında kurulmuştur. Kulüp, Karadeniz'in serin sularıyla çevrili Trabzon şehrinden gelmektedir ve bu bölgedeki futbol kültürünü temsil etmektedir. Kuruluşundan bu yana, Trabzonspor hem ulusal hem de uluslararası arenada önemli başarılar elde etmiş ve tutkulu taraftar kitlesiyle dikkat çekmiştir.
+
+Trabzonspor'un aldığı başlıca kupalar şunlardır:
+
+Türkiye Süper Lig: Trabzonspor, Türkiye Süper Lig'i altı kez kazanmıştır. Bu şampiyonluklarını 1975-1976, 1976-1977, 1978-1979, 1980-1981, 1983-1984 ve 2019-2020 sezonlarında elde etmiştir.
+
+Türkiye Kupası: Kulüp, Türkiye Kupası'nı dokuz kez müzesine götürmüştür. Bu kupaları kazandığı yıllar ise 1976, 1977, 1978, 1984, 1992, 1995, 2010, 2012 ve 2020'dir.
+
+Başka bir önemli başarılarından biri de 1976 yılında UEFA Kupası'nda yarı finale kadar yükselmiş olmalarıdır.
+
+Trabzonspor, bu başarıları elde etmesinde unutulmaz oyuncularının ve efsanevi teknik direktörlerinin katkısı büyüktür. Kulübün tarihindeki efsanevi oyuncularından biri, Ahmet Suat Özyazıcı'dır. Özyazıcı, Trabzonspor tarihine damga vuran oyunculardan biri olarak hatırlanır ve kulübün başarısında önemli bir rol oynamıştır.
+
+Özkan Sümer de Trabzonspor'un efsanevi isimlerindendir. Hem oyuncu olarak hem de teknik direktör olarak kulübe hizmet etmiş ve kulübün başarılarına önemli katkılarda bulunmuştur.
+
+Ayrıca, Cemil Usta da kulübün önemli isimlerinden biridir. Trabzonspor'un tarihinde unutulmaz bir yere sahip olan Cemil Usta, kulübün efsanevi kalecilerinden biri olarak hatırlanır ve birçok önemli maçta takımını sırtlamıştır.
+
+Trabzonspor'un tarihindeki diğer önemli isimler arasında Ali Kemal Denizci, Hami Mandıralı, Fatih Tekke gibi isimler de bulunmaktadır. Bu oyuncular ve teknik direktörler, kulübün başarılarına ve mirasına önemli katkılarda bulunmuşlardır.
+
+Sonuç olarak, Trabzonspor Türk futbolunun önemli bir parçası olarak tarihinde birçok başarıya imza atmış ve tutkulu taraftar kitlesiyle Türk futbolunun kalbinde yer almıştır. Kulüp, aldığı kupalar, yetiştirdiği efsanevi oyuncular ve unutulmaz maçlarıyla Türk futbolunun önemli bir taşıyıcısı ve sembolü olmaya devam etmektedir.</p>
+        <center><img src ="Trabzonspor1976.png"></center>
+        </section>
+        <section id="iletisim" class="section">
+            <h1>İletişim</h1>
+            <form id="contactForm" class="w-50 mx-auto" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="name">Ad:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesaj:</label>
+                    <textarea class="form-control" id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="page">Sayfa:</label>
+                    <select class="form-control" id="page" name="page" required>
+                        <option value="Anasayfa">Anasayfa</option>
+                        <option value="Hakkında">Hakkında</option>
+                        <option value="Şehrim">Şehrim</option>
+                        <option value="Mirasımız">Mirasımız</option>
+                        <option value="Takımımız">Takımımız</option>
+                        <option value="İletişim">İletişim</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="clearForm()">Temizle</button>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
+        </section>
+        <section id="mesajlar" class="section">
+            <h1>Mesajlar</h1>
+            <ul id="messageList" class="list-group">
+                <!-- Mesajlar burada görünecek -->
+            </ul>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                const slides = document.querySelectorAll(".slides img");
+                slides.forEach((slide, index) => {
+                    slide.style.display = "none";
+                    slide.classList.remove("active");
+                });
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                slides[slideIndex - 1].style.display = "block";
+                slides[slideIndex - 1].classList.add("active");
+                setTimeout(showSlides, 3000); // 3 saniyede bir değiştir
+            }
+
+            // Hoşgeldiniz mesajını kontrol et ve göster
+            const welcomeMessage = sessionStorage.getItem('welcomeMessage');
+            if (welcomeMessage) {
+                const messageDiv = document.getElementById('welcomeMessage');
+                messageDiv.textContent = welcomeMessage;
+                messageDiv.style.display = 'block';
+                sessionStorage.removeItem('welcomeMessage');
+            }
+
+            loadMessages();
+        });
+
+        function showImageContent(contentId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(contentId).classList.add('active');
+        }
+
+        function clearForm() {
+            document.getElementById("contactForm").reset();
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const firstLetter = username.charAt(0).toLowerCase();
+            const validFirstLetters = ['e', 'u', 'g', 'b'];
+            const numbersBeforeAt = username.substring(0, username.indexOf('@')).replace(/[^0-9]/g, '');
+
+            if (!validFirstLetters.includes(firstLetter)) {
+                alert('E-posta ve şifre ilk harfi "e, u, g, b" harflerinden biri olmalıdır.');
+                event.preventDefault();
+                return;
+            }
+
+            if (numbersBeforeAt.length !== 9) {
+                alert('E-posta adresinde @ işaretine kadar tam olarak 9 adet sayı bulunmalıdır.');
+                event.preventDefault();
+                return;
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(username)) {
+                alert('Geçerli bir e-posta adresi giriniz.');
+                event.preventDefault();
+                return;
+            }
+
+            const studentId = username.substring(0, username.indexOf('@'));
+
+            if (password !== studentId) {
+                alert('Giriş başarısız. Lütfen tekrar deneyiniz.');
+                event.preventDefault();
+            }
+        });
+         function submitForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const page = document.getElementById('page').value;
+
+            const messageObject = {
+                name: name,
+                email: email,
+                message: message,
+                page: page
+            };
+
+            const messageList = JSON.parse(localStorage.getItem('messages')) || [];
+            messageList.push(messageObject);
+            localStorage.setItem('messages', JSON.stringify(messageList));
+
+            alert('Mesajınız başarıyla gönderildi.');
+            clearForm();
+            showSection('mesajlar');
+            loadMessages();
+        }
+
+        function loadMessages() {
+            const messageListElement = document.getElementById('messageList');
+            const messageList = JSON.parse(localStorage.getItem('messages')) || [];
+            messageListElement.innerHTML = '';
+            messageList.forEach((msg, index) => {
+                const messageItem = document.createElement('li');
+                messageItem.className = 'list-group-item';
+                messageItem.textContent = `Ad: ${msg.name}, E-posta: ${msg.email}, Sayfa: ${msg.page}, Mesaj: ${msg.message}`;
+                messageListElement.appendChild(messageItem);
+            });
+        }
+
+    </script>
+</body>
+</html>
